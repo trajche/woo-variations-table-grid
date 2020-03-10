@@ -36,19 +36,19 @@ function vt_remove_update_notification($value) {
     return $value;
 } 
 
-add_action('init', 'vt_StartSession');
-function vt_StartSession() {
-  if ( vt_is_session_started() === FALSE ) { session_start(); }
-}
+// add_action('init', 'v t_StartSession');
+// function vt_StartSession() {
+//   if ( vt_is_session_started() === FALSE ) { session_start(); }
+// }
 
-add_action('wp_logout', 'vt_EndSession');
-add_action('wp_login', 'vt_EndSession');
+// add_action('wp_logout', 'vt_EndSession');
+// add_action('wp_login', 'vt_EndSession');
 
-function vt_EndSession() {
-  if ( vt_is_session_started() === TRUE ) {
-    session_destroy ();
-  }
-}
+// function vt_EndSession() {
+//   if ( vt_is_session_started() === TRUE ) {
+//     session_destroy ();
+//   }
+// }
 
 // Load plugin textdomain
 add_action( 'plugins_loaded', 'vartable_load_textdomain' );
